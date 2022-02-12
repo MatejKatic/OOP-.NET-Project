@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="OOPNET_WindowsPresentationFoundation.PlayerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OOPNET_WindowsPresentationFoundation"
+             mc:Ignorable="d" 
+             d:DesignHeight="1250" d:DesignWidth="800" MaxWidth="200" MaxHeight="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Image Stretch="Uniform" x:Name="imgPlayer" MaxWidth="70" MaxHeight="70"/>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="lblImeBroj" Grid.Row="1" />
+    </Grid>
+
+</UserControl>

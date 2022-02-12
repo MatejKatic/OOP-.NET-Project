@@ -1,0 +1,58 @@
+﻿<Window x:Class="OOPNET_WindowsPresentationFoundation.PlayerInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOPNET_WindowsPresentationFoundation"
+        mc:Ignorable="d"
+        xmlns:lang="clr-namespace:OOPNET_WindowsPresentationFoundation.Properties"
+        Title="{x:Static lang:Resources.playerinfo}" Height="450" Width="800">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="(Window.Opacity)"
+                                 From="0.0" To="1.0" Duration="0:0:.3"
+                                 AutoReverse="False"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="2" x:Name="imgPlayer" Stretch="Uniform"></Image>
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.name}" x:Name="lblName" Grid.Column="0" Grid.Row="1"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblNameVALUE" Grid.Column="1" Grid.Row="1"></Label>
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.shirtnumber}" x:Name="lblNumber" Grid.Column="0" Grid.Row="2"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblNumberVALUE" Grid.Column="1" Grid.Row="2"></Label>
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.position}" x:Name="lblPosition" Grid.Column="0" Grid.Row="3"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblPositionVALUE" Grid.Column="1" Grid.Row="3"></Label>
+
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.captain}" x:Name="lblCaptain" Grid.Column="0" Grid.Row="4"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblCaptainVALUE" Grid.Column="1" Grid.Row="4"></Label>
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.goalsthisgame}" x:Name="lblGoalsThisGame" Grid.Column="0" Grid.Row="5"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblGoalsThisGameVALUE" Grid.Column="1" Grid.Row="5"></Label>
+
+
+        <Label HorizontalAlignment="Right" Content="{x:Static lang:Resources.ycardsthisgame}" x:Name="lblYellowCardsThisGame" Grid.Column="0" Grid.Row="6"></Label>
+        <Label HorizontalAlignment="Left" x:Name="lblYellowCardsThisGameVALUE" Grid.Column="1" Grid.Row="6"></Label>
+    </Grid>
+</Window>
